@@ -36,10 +36,12 @@ export class StudentHolberton {
   }
 }
 
-export const listOfStudents = [
+const listOfStudents = [
   new StudentHolberton('Guillaume', 'Salva', class2020),
   new StudentHolberton('John', 'Doe', class2020),
   new StudentHolberton('Albert', 'Clinton', class2019),
   new StudentHolberton('Donald', 'Bush', class2019),
   new StudentHolberton('Jason', 'Sandler', class2019),
 ];
+
+export default listOfStudents;
