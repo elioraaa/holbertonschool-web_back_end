@@ -1,8 +1,6 @@
 -- script
 
-SELECT
-  band_name,
-  (CASE WHEN split IS NULL OR split = 0 THEN 2024 ELSE split END) - formed AS lifespan
+SELECT band_name, CASE WHEN split IS NULL OR split = '-' OR split = '0' THEN 2024 - CAST(formed AS SIGNED) ELSE CAST(split AS SIGNED) - CAST(formed AS SIGNED) END AS lifespan
 FROM metal_bands
-WHERE TRIM(SUBSTRING_INDEX(style, ',', 1)) = 'Glam rock'
+WHERE style LIKE '%Glam rock%'
 ORDER BY lifespan DESC;
