@@ -4,5 +4,5 @@ SELECT
   band_name,
   (IFNULL(split, 2024) - formed) AS lifespan
 FROM metal_bands
-WHERE style = 'Glam rock'
+WHERE main_style = 'Glam rock'
 ORDER BY lifespan DESC;
