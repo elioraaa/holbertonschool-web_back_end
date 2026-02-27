@@ -1,2 +1,5 @@
--- script to list the number of fans
-SELECT origin, SUM(fans) AS nb_fans FROM metal_bands GROUP BY origin ORDER BY nb_fans DESC;
+-- script to list the number 
+SELECT origin, SUM(fans) AS nb_fans
+FROM metal_bands
+GROUP BY origin
+ORDER BY nb_fans DESC;
